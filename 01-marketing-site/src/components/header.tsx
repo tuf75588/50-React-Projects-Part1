@@ -103,6 +103,10 @@ const buttonStyles = {
 
 }
 
+
+
+// 
+
 const Header = ({ siteTitle }: HeaderProps) => (
   <header
     style={headerStyles}
@@ -135,6 +139,10 @@ const Header = ({ siteTitle }: HeaderProps) => (
         <div>
           <div style={{ marginRight: '48px', display: 'inline-block' }}>
             <button style={buttonStyles} className="submit">Submit</button>
+          </div>
+          <div className="login-join-container">
+          <a href="#" className="login">Login</a>
+          <a href="#" className="join">Join free</a>
           </div>
         </div>
       </div>
