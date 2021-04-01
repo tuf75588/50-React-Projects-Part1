@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { link } from "node:fs"
 
 type HeaderProps = {
   siteTitle: string;
@@ -11,7 +12,6 @@ const headerStyles = {
   top: 0,
   zIndex: '3'
 }
-
 const navStyles = {
   display: 'flex',
   alignItems: 'center',
@@ -26,7 +26,8 @@ const navStyles = {
 const anchorStyles = {
   display: 'flex',
   alignItems: 'center',
-  marginTop: '-2px'
+  marginTop: '-2px',
+  textDecoration: 'none',
 }
 
 
@@ -50,6 +51,58 @@ const formStyles = {
 
 }
 
+
+const secondChildDiv = {
+  paddingLeft: '36px',
+  paddingRight: '36px',
+  textAlign: 'center',
+}
+
+const unorderedListStyles = {
+  display: 'inline-block',
+  paddingLeft: 0,
+  listStyle: 'none',
+  marginTop: 0,
+  marginBottom: 0,
+}
+
+const listStyle = {
+  display: 'inline-block',
+  fontSize: '14px',
+  fontWeight: 500,
+}
+
+const linkAnchor = {
+  padding: '20px 12px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  textDecoration: 'none'
+}
+
+const submitButtonContainer = {
+  marginRight: '48px',
+  display: 'inline-block'
+}
+
+const buttonStyles = {
+  color: '#767676',
+  backgroundColor: '#fff',
+  borderColor: '#d1d1d1',
+  height: '32px',
+  padding: '0 11px',
+  fontSize: '14px',
+  lineHeight: '30px',
+  display: 'inline-block',
+  borderRadius: '4px',
+  transition: 'all .1s ease-in-out',
+  textAlign: 'center',
+  fill: 'currentColor',
+  textDecoration: 'none',
+
+
+}
+
 const Header = ({ siteTitle }: HeaderProps) => (
   <header
     style={headerStyles}
@@ -59,17 +112,30 @@ const Header = ({ siteTitle }: HeaderProps) => (
       <div style={firstChildDiv}><a style={anchorStyles} href="">Logo
         <div
           style={{ display: 'flex', flexDirection: 'column', marginLeft: '12px', whiteSpace: 'nowrap' }}
-        ><span>NuSplash</span>
+        ><span><strong>{siteTitle}</strong></span>
 
           <span>Photos for everyone</span>
         </div>
       </a>
         <div style={{ width: '100%', marginLeft: '18px' }}>
           <form style={formStyles}>
-          <button title="Search NuSplash">
-          <svg width="32" height="32" class="_3cOFI _2Jh5K _2_G8g" version="1.1" viewBox="0 0 32 32" aria-hidden="false"><path d="M22 20c1.2-1.6 2-3.7 2-6 0-5.5-4.5-10-10-10S4 8.5 4 14s4.5 10 10 10c2.3 0 4.3-.7 6-2l6.1 6 1.9-2-6-6zm-8 1.3c-4 0-7.3-3.3-7.3-7.3S10 6.7 14 6.7s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3z"></path></svg>
-          </button>
+            <button title="Search NuSplash">
+              <svg width="32" height="32" className="_3cOFI _2Jh5K _2_G8g" version="1.1" viewBox="0 0 32 32" aria-hidden="false"><path d="M22 20c1.2-1.6 2-3.7 2-6 0-5.5-4.5-10-10-10S4 8.5 4 14s4.5 10 10 10c2.3 0 4.3-.7 6-2l6.1 6 1.9-2-6-6zm-8 1.3c-4 0-7.3-3.3-7.3-7.3S10 6.7 14 6.7s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3z"></path></svg>
+            </button>
           </form>
+        </div>
+      </div>
+      <div style={secondChildDiv}>
+        <ul style={unorderedListStyles}>
+          <li style={listStyle}><a style={linkAnchor}>Explore</a></li>
+          <li style={listStyle}><a style={linkAnchor}>Brands</a></li>
+        </ul>
+      </div>
+      <div className="third-child-div">
+        <div>
+          <div style={{ marginRight: '48px', display: 'inline-block' }}>
+            <button style={buttonStyles} className="submit">Submit</button>
+          </div>
         </div>
       </div>
     </nav>
