@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 
 const navStyles = {
@@ -14,14 +14,52 @@ function Nav(): JSX.Element {
       <div className="nav-container">
         <div className="editorial">
           <ul className="ul-editorial">
-            <li><a href="#"><span style={{fontWeight: 50}}>Editorial</span></a></li>
+            <li><a href="#"><span style={{ fontWeight: 50 }}>Editorial</span></a></li>
           </ul>
         </div>
         <div className="divider"></div>
         <div className="nav-items">
           <div className="inner-nav">
-            <div className="chevron">
-              <button className="chevron"></button>
+            <div className="second-inner-nav-child">
+              <div></div>
+              <div className="shrink">
+                <div className="shrink-child">
+                  <ul className="shrink-ul">
+                    <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">Wallpapers</span>
+                      </a>
+                    </li>
+                    <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">Nature</span>
+                      </a>
+                    </li>
+                    <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">People</span>
+                      </a>
+                    </li>        <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">Architecture</span>
+                      </a>
+                    </li>
+                    <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">Current Events</span>
+                      </a>
+                    </li>        <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">Business & Work</span>
+                      </a>
+                    </li>        <li className="shrink-ul-li">
+                      <a className="shrink-ul-anchor" href="#">
+                        <span className="shrink-ul-span">Fashion</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -31,3 +69,5 @@ function Nav(): JSX.Element {
 }
 
 export default Nav;
+
+

@@ -42,7 +42,7 @@ const formStyles = {
   fontSize: '14px',
   position: 'relative',
   color: '#111',
-  height: 40,
+  height: '40px',
   borderRadius: '24px',
   backgroundColor: '#eee',
   border: '1px solid transparent',
@@ -123,7 +123,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
       </a>
         <div style={{ width: '100%', marginLeft: '18px' }}>
           <form style={formStyles}>
-            <button title="Search NuSplash">
+            <button title="Search NuSplash" className="svg-button">
               <svg width="32" height="32" className="_3cOFI _2Jh5K _2_G8g" version="1.1" viewBox="0 0 32 32" aria-hidden="false"><path d="M22 20c1.2-1.6 2-3.7 2-6 0-5.5-4.5-10-10-10S4 8.5 4 14s4.5 10 10 10c2.3 0 4.3-.7 6-2l6.1 6 1.9-2-6-6zm-8 1.3c-4 0-7.3-3.3-7.3-7.3S10 6.7 14 6.7s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3z"></path></svg>
             </button>
           </form>
@@ -141,8 +141,8 @@ const Header = ({ siteTitle }: HeaderProps) => (
             <button style={buttonStyles} className="submit">Submit</button>
           </div>
           <div className="login-join-container">
-          <a href="#" className="login">Login</a>
-          <a href="#" className="join">Join free</a>
+            <a href="#" className="login">Login</a>
+            <a href="#" className="join">Join free</a>
           </div>
         </div>
       </div>

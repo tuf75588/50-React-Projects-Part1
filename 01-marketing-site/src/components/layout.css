@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue,
+    Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -30,7 +31,7 @@ body {
   left: -18px;
   width: 1px;
   height: 32px;
-  content: "";
+  content: '';
   background-color: #d1d1d1;
 }
 
@@ -61,7 +62,7 @@ body {
   background-color: #3cb46e;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   text-align: center;
   -webkit-user-select: none;
   user-select: none;
@@ -72,7 +73,6 @@ body {
   line-height: 30px;
   color: #fff;
   text-decoration: none;
-
 }
 
 .nav-container {
@@ -103,7 +103,6 @@ body {
 .ul-editorial li a {
   color: #111;
   pointer-events: none;
-  box-shadow: inset 0 -2px #111;
   display: flex;
   align-items: center;
   height: 100%;
@@ -129,9 +128,9 @@ body {
   isolation: isolate;
 }
 .inner-nav::before {
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   opacity: 0;
-  content: "";
+  content: '';
   display: block;
   pointer-events: none;
   position: absolute;
@@ -146,4 +145,89 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.chevron-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  background-color: initial;
+  text-align: inherit;
+}
+._1A-eG {
+  fill: #767676;
+  transition: fill 0.1s ease-in-out;
+  width: 22px;
+  height: 22px;
+}
+.second-inner-nav-child {
+  box-sizing: initial;
+  overflow-y: hidden;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  justify-content: center;
+  width: 100%;
+}
+.shrink {
+  flex-shrink: 0;
+}
+.shrink-child {
+  padding: 0 20px;
+}
+.shrink-ul {
+  margin-bottom: 0;
+  margin-left: -32px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  justify-content: center;
+}
+
+.shrink-ul-li {
+  padding-bottom: 0;
+  padding-left: 32px;
+  height: 100%;
+  text-align: center;
+}
+.shrink-ul-anchor {
+  color: #111;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.shrink-ul-anchor span {
+  font-weight: 500;
+}
+
+._3cOFI {
+  width: 32px;
+  height: 32px;
+  padding-left: 14px;
+  fill: #767676;
+  transition: fill 0.1s ease-in-out;
+}
+
+.svg-button {
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  background-color: initial;
+  text-align: inherit;
+  font-size: 100%;
+  margin: 0;
 }
