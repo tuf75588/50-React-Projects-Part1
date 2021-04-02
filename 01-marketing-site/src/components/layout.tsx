@@ -8,7 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Nav from './nav'
 import Header from "./header"
 import './layout.css'
 
@@ -27,6 +27,7 @@ const Layout = ({ children }: React.PropsWithChildren<{}>): JSX.Element => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Nav />
       <div
         style={{
           margin: `0 auto`,

@@ -74,3 +74,76 @@ body {
   text-decoration: none;
 
 }
+
+.nav-container {
+  display: flex;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%), 0 0 1px rgb(1 0 0 / 10%);
+}
+
+.editorial {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ul-editorial {
+  margin-bottom: 0;
+  margin-left: -32px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 0;
+}
+.ul-editorial li {
+  padding-bottom: 0;
+  padding-left: 32px;
+  height: 100%;
+}
+
+.ul-editorial li a {
+  color: #111;
+  pointer-events: none;
+  box-shadow: inset 0 -2px #111;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.divider {
+  background-color: #d1d1d1;
+  width: 1px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.nav-items {
+  flex-grow: 1;
+  min-width: 0;
+}
+.inner-nav {
+  position: relative;
+  isolation: isolate;
+}
+.inner-nav::before {
+  transition: opacity .2s ease-in-out;
+  opacity: 0;
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.chevron {
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
