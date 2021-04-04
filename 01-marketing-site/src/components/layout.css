@@ -233,3 +233,13 @@ body {
   font-size: 100%;
   margin: 0;
 }
+
+.grid-container {
+  margin: 12px auto;
+  max-width: 1320px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
