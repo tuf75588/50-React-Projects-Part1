@@ -254,3 +254,8 @@ body {
   gap: 10px;
   grid-template-columns: minmax(0, 1fr);
 }
+
+.subtext {
+  font-size: 18px;
+  font-weight: 400;
+}
