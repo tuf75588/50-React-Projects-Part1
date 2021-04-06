@@ -1,7 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { link } from "node:fs"
 
 type HeaderProps = {
   siteTitle: string;
@@ -142,7 +141,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
           </div>
           <div className="login-join-container">
             <a href="#" className="login">Login</a>
-            <a href="#" className="join">Join free</a>
+            <Link to="/sign-up" className="join">Join free</Link>
           </div>
         </div>
       </div>
