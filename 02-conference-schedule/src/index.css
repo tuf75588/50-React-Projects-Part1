@@ -12,6 +12,29 @@ code {
     monospace;
 }
 
-.search-input {
-  padding: 10px;
+.header_home {
+  background: url('./images/hero.png') no-repeat center 0 fixed;
+  background-size: cover;
+}
+
+.header-nav,
+.header_home {
+  background-color: #000;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 800px auto;
+  padding: 25px;
+  padding-bottom: 15px;
+}
+.header-nav ul {
+  margin: 0;
+}
+.header-nav li {
+  display: inline-block;
+  padding: 0 25px;
+}
+.header-nav li a {
+  color: #fff;
 }
