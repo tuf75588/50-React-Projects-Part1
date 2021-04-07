@@ -259,3 +259,34 @@ body {
   font-size: 18px;
   font-weight: 400;
 }
+
+.outer-form-container {
+  display: flex;
+  height: 60vh;
+}
+
+.form-control {
+  font-size: 18px;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-control label {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.form-control input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.submit {
+  padding: 10px;
+  border-radius: 5px;
+}
