@@ -15,6 +15,13 @@ function Header() {
             <li><a href="/about">About</a></li>
           </ul>
         </section>
+        <div className="header-nav-social">
+          <a href="http://" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">Github</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">Tickets</a>
+        </div>
       </div>
     </header>
   )
