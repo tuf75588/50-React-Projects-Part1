@@ -16,6 +16,16 @@ code {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-left: -20px;
+  margin: 0;
+  font-family: Rubik, sans-serif;
+}
 .header_home {
   background: url('./images/hero.png') no-repeat center 0 fixed;
   background-size: cover;
@@ -43,6 +53,12 @@ a {
 .header-nav li {
   display: inline-block;
   padding: 0 25px;
+}
+.blm_banner {
+  background: #232323;
+  text-align: center;
+  padding: 10px;
+  color: #dcdcdc;
 }
 .header-nav li a {
   color: #fff;
@@ -84,4 +100,35 @@ a {
   color: #fff;
   border: 1px solid #fff;
   font-size: 18px;
+}
+
+.home_header_wrapper {
+  padding: 50px;
+  color: #000;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+.home_header_content {
+  border-left: 4px solid #000;
+  padding-left: 25px;
+  margin-left: 25px;
+  width: 525px;
+  z-index: 100;
+}
+.home_header_logo {
+  transform: translate(-25%, 150%) rotate(270deg);
+}
+
+.home_header_content h1,
+h2 {
+  border: 0 none;
+}
+
+.home_header_content h1 {
+  font-size: 75px;
+}
+
+.home_header_content h2 {
+  font-size: 40px;
 }
