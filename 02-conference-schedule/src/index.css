@@ -132,3 +132,13 @@ h2 {
 .home_header_content h2 {
   font-size: 40px;
 }
+
+.live_stream {
+  text-transform: uppercase;
+  background: #dd4b53;
+  color: #fff;
+  box-shadow: 0 2px 4px rgb(0, 0, 0 / 10%);
+  font-size: 20px;
+  padding: 12px 35px;
+  border-radius: 5px;
+}

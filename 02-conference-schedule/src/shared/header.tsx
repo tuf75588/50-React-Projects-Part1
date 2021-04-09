@@ -35,6 +35,7 @@ function Header() {
             <h1>Awesome React Conf</h1>
             <h2>{new Date().toDateString()}</h2>
             <p>Awesome React Conf is a community conference about React and topics interesting to React developers. We focus on a friendly, welcoming atmosphere, engaging talks from new and established speakers, and plenty of hallway-track time to chat with interesting people.</p>
+            <div><a href="/live_stream" className="live_stream btn">Watch Live Stream</a></div>
           </div>
         </div>
       </div>
