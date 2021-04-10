@@ -167,3 +167,24 @@ h6 {
 .content .highlight {
   padding: 0;
 }
+
+.center-me {
+  text-align: center;
+}
+
+.Person {
+  display: inline-block;
+  margin: 25px 50px;
+  text-align: center;
+  position: relative;
+  width: 225px;
+}
+.Avatar {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+}
+.Person .Avatar {
+  display: block;
+  margin: 0 auto 15px;
+}
