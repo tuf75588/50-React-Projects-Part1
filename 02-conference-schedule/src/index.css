@@ -25,6 +25,9 @@ h6 {
   margin-left: -20px;
   margin: 0;
   font-family: Rubik, sans-serif;
+  border-left: 4px solid #005659;
+  padding-left: 20px;
+  color: #008997;
 }
 .header_home {
   background: url('./images/hero.png') no-repeat center 0 fixed;
@@ -120,8 +123,7 @@ h6 {
   transform: translate(-25%, 150%) rotate(270deg);
 }
 
-.home_header_content h1,
-h2 {
+.home_header_content .awesome {
   border: 0 none;
 }
 
@@ -141,4 +143,17 @@ h2 {
   font-size: 20px;
   padding: 12px 35px;
   border-radius: 5px;
+}
+
+.content {
+  padding: 50px 175px;
+  font-size: 18px;
+}
+
+.content section {
+  padding: 25px;
+}
+
+.content section > h2 {
+  margin-left: -25px;
 }
