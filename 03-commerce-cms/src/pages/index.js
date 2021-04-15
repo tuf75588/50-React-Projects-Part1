@@ -47,7 +47,7 @@ export default () => (
                 data-item-url={`/`}
               >
                 <div className="Product__image">
-                  <Link to="/game" state={{ product }}>
+                  <Link to="/game" key={product.id}>
                     <Img sizes={product.image.sizes} />
                   </Link>
                 </div>{' '}
