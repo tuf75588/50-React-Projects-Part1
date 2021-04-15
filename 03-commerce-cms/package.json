@@ -1,6 +1,6 @@
 {
-  "name": "datocms-snipcart-gatsby-example",
-  "description": "An example project to demonstrate how you can integrate Gatsby, Snipcart and DatoCMS",
+  "name": "03-example-ecommerce-store",
+  "description": "A mock ecommerce store using DatoCMS and snipcart together",
   "version": "1.0.0",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "dependencies": {
