@@ -2,22 +2,21 @@ import React from 'react';
 import Layout from '../layouts/index';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-function Game() {
+function Game(props) {
+  const {
+    location: {
+      state: { key },
+    },
+  } = props;
+  console.log({ key });
   return (
     <StaticQuery
       query={graphql`
         query MyQuery {
-          allDatoCmsProduct(filter: {}) {
-            edges {
-              node {
-                image {
-                  url
-                  sizes(maxHeight: 300, maxWidth: 300) {
-                    src
-                    srcSet
-                  }
-                }
-                id
+          datoCmsProduct {
+            image {
+              sizes(maxWidth: 300, maxHeight: 300) {
+                ...GatsbyDatoCmsSizes
               }
             }
           }
@@ -28,13 +27,21 @@ function Game() {
           }
         }
       `}
-      render={(data) =>
-        console.log(data) || (
+      render={(data) => {
+        return (
           <Layout site={data.site}>
-            <h1>game page</h1>
+            <div
+              className="game-container"
+              style={{ border: '1px solid black' }}
+            >
+              <Img
+                sizes={data.datoCmsProduct.image.sizes}
+                style={{ height: 300, width: 300 }}
+              />
+            </div>
           </Layout>
-        )
-      }
+        );
+      }}
     />
   );
 }
