@@ -42,22 +42,29 @@ function Game(props) {
         const product = data.products.edges.filter(
           ({ node }) => node.id === productId
         );
-        console.log(product[0]);
+
         return (
           <Layout site={data.site}>
             <div
-              className="game-container"
+              className="wrapper"
               style={{
                 border: '1px solid black',
                 textAlign: 'left',
+                display: 'flex',
                 padding: '10px',
+                justifyContent: 'space-around',
               }}
             >
-              <h1>{product[0].node.name}</h1>
-              <Img
-                sizes={product[0].node.image.sizes}
-                style={{ height: '100%', width: 300 }}
-              />
+              <div className="game-container">
+                <h1>{product[0].node.name}</h1>
+                <Img
+                  sizes={product[0].node.image.sizes}
+                  style={{ height: 300, width: 300 }}
+                />
+              </div>
+              <div>
+                <h1>Reviews</h1>
+              </div>
             </div>
           </Layout>
         );
