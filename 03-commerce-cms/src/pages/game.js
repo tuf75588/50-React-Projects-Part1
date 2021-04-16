@@ -4,19 +4,30 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 function Game(props) {
   const {
-    location: {
-      state: { key },
-    },
+    location: { state: id },
   } = props;
-  console.log({ key });
+  const { id: productId } = id;
+
   return (
     <StaticQuery
       query={graphql`
         query MyQuery {
-          datoCmsProduct {
-            image {
-              sizes(maxWidth: 300, maxHeight: 300) {
-                ...GatsbyDatoCmsSizes
+          products: allDatoCmsProduct {
+            edges {
+              node {
+                id
+                name
+                price
+                image {
+                  url
+                  sizes(
+                    maxWidth: 300
+                    maxHeight: 300
+                    imgixParams: { fm: "jpg" }
+                  ) {
+                    ...GatsbyDatoCmsSizes
+                  }
+                }
               }
             }
           }
@@ -28,15 +39,24 @@ function Game(props) {
         }
       `}
       render={(data) => {
+        const product = data.products.edges.filter(
+          ({ node }) => node.id === productId
+        );
+        console.log(product[0]);
         return (
           <Layout site={data.site}>
             <div
               className="game-container"
-              style={{ border: '1px solid black' }}
+              style={{
+                border: '1px solid black',
+                textAlign: 'left',
+                padding: '10px',
+              }}
             >
+              <h1>{product[0].node.name}</h1>
               <Img
-                sizes={data.datoCmsProduct.image.sizes}
-                style={{ height: 300, width: 300 }}
+                sizes={product[0].node.image.sizes}
+                style={{ height: '100%', width: 300 }}
               />
             </div>
           </Layout>
