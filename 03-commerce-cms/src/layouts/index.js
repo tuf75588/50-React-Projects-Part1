@@ -4,12 +4,12 @@ import Link from 'gatsby-link';
 
 import '../style/index.scss';
 
-const Layout = ({ children, site }) => (
+const Layout = ({ children, site }, style) => (
   <div>
     <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
     <div className="Container">
       <div className="Header">
-        <div className="Wrap">
+        <div className="Wrap" style={{ ...style }}>
           <div className="Header__body">
             <h1 className="Header__title">
               <Link data-text={site.siteMetadata.siteName} to="/">

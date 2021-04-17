@@ -13,6 +13,7 @@ export default () => (
               id
               name
               price
+              developer
               image {
                 url
                 sizes(
