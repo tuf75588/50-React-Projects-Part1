@@ -49,22 +49,40 @@ function Game(props) {
               className="wrapper"
               style={{
                 border: '1px solid black',
-                textAlign: 'left',
                 display: 'flex',
                 padding: '10px',
-                justifyContent: 'space-around',
+
+                justifyContent: 'space-between',
               }}
             >
               <div className="game-container">
-                <h1>{product[0].node.name}</h1>
                 <Img
                   sizes={product[0].node.image.sizes}
-                  style={{ height: 300, width: 300 }}
+                  style={{ height: 400, width: 300 }}
                 />
               </div>
-              <div>
-                <h1>Reviews</h1>
-              </div>
+              <aside style={{ display: 'flex', flexDirection: 'column' }}>
+                <h1
+                  style={{
+                    fontSize: '3.5rem',
+                  }}
+                >
+                  {product[0].node.name}
+                </h1>
+                <p style={{ textAlign: 'right', fontWeight: 'bold' }}>
+                  Respawn Entertainment
+                </p>
+                <button
+                  style={{
+                    padding: '10px',
+                    color: '#fff',
+                    backgroundColor: 'rebeccapurple',
+                    marginTop: '30px',
+                  }}
+                >
+                  BUY NOW
+                </button>
+              </aside>
             </div>
           </Layout>
         );
