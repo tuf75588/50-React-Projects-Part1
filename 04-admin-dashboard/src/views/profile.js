@@ -1,9 +1,9 @@
 import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
+import { Loading } from '../components/';
 const Profile = () => {
   const { user } = useAuth0();
   const { name, picture, email } = user;
-  console.log(user);
   return (
     <div>
       <div className="row align-items-center profile-header">
@@ -29,3 +29,7 @@ const Profile = () => {
 };
 
 export default Profile;
+/* 
+onRedirecting will improve the user experience by not showing 
+any flashing of mixed UI components (protected and public components)
+*/
