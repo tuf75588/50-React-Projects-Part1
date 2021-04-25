@@ -1,10 +1,43 @@
-import React, { useState } from "react";
+import { useAuth0 } from '@auth0/auth0-react';
+import React, { useState } from 'react';
 
 const ExternalApi = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
+  const serverUrl = process.env.REACT_APP_SERVER_URL;
+  const { getAccessTokenSilently } = useAuth0();
+
+  // for fetching a public message
+  const callApi = async () => {
+    try {
+      const response = await fetch(`${serverUrl}/api/messages/public-message`);
+      const responseData = await response.json();
+      setMessage(responseData.message);
+    } catch (error) {
+      setMessage(error.message);
+    }
+  };
+  /* more secure token based protected message */
+
+  const callSecureApi = async () => {
+    try {
+      const token = await getAccessTokenSilently();
+      const response = await fetch(
+        `${serverUrl}/api/messages/protected-message`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      const responseData = await response.json();
+      setMessage(responseData.message);
+    } catch (error) {
+      setMessage(error.message);
+    }
+  };
 
   return (
-    <div>
+    <div className="container">
       <h1>External API</h1>
       <p>
         You use will use a button to call an external API using an access token,
@@ -17,10 +50,14 @@ const ExternalApi = () => {
         role="group"
         aria-label="External API Requests Examples"
       >
-        <button type="button" className="btn btn-primary">
+        <button type="button" className="btn btn-primary" onClick={callApi}>
           Get Public Message
         </button>
-        <button type="button" className="btn btn-primary">
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={callSecureApi}
+        >
           Get Protected Message
         </button>
       </div>
