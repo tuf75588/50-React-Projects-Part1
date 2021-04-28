@@ -7,11 +7,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
-  max-height: 100%;
+  max-height: 1100px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -49,11 +50,25 @@ code {
 
 .flex-container {
   display: flex;
-
   height: 100%;
 }
 
 .container {
   display: flex;
   margin: auto;
+}
+.row {
+  border: 1px solid black;
+  padding: 10px;
+}
+.form-control label {
+  margin: 10px;
+}
+.form-control input {
+  margin: 10px;
+  padding: 10px;
+  outline: 0;
+}
+.form-control button {
+  margin: 10px;
 }
