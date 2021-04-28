@@ -18,6 +18,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button {
+  cursor: pointer;
+}
 #root,
 #app {
   height: 100%;
@@ -65,13 +68,23 @@ code {
 }
 
 .row .btn {
-  font-size: 1.2rem;
   padding: 0.5em;
   color: #fff;
   background-color: rebeccapurple;
+  border: none;
+  border-radius: 5px;
 }
 
 .row .login {
   margin-bottom: 1rem;
   padding: 0.5em;
+}
+.btn,
+.login {
+  font-size: 1.2rem;
+  width: 100px;
+}
+
+.sign-up span {
+  font-size: 1.2rem;
 }

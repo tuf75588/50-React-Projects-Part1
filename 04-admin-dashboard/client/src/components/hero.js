@@ -6,8 +6,10 @@ const Hero = () => (
     <div className="container">
       <div className="row">
         <Login />
-        <div>
-          Don't have an account yet? <Signup /> now
+        <div className="sign-up">
+          <span>
+            Don't have an account yet? <Signup /> now!
+          </span>
         </div>
       </div>
     </div>
