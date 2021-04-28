@@ -1,24 +1,14 @@
 import React from 'react';
-
+import Login from './login-button';
+import Signup from './sign-up';
 const Hero = () => (
   <div className="flex-container">
     <div className="container">
       <div className="row">
-        <span className="flex-item">
-          <form className="form-control">
-            <div>
-              <label htmlFor="username">username</label>
-            </div>
-            <input type="text" placeholder="username" />
-            <div>
-              <label htmlFor="password">password</label>
-            </div>
-            <input type="password" placeholder="password" />
-            <div>
-              <button>Submit</button>
-            </div>
-          </form>
-        </span>
+        <Login />
+        <div>
+          Don't have an account yet? <Signup /> now
+        </div>
       </div>
     </div>
   </div>
