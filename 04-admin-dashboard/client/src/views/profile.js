@@ -1,11 +1,12 @@
 import React from 'react';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
-import { Loading } from '../components/';
+import { Loading, NavBar } from '../components/';
 const Profile = () => {
   const { user } = useAuth0();
   const { name, picture, email } = user;
   return (
     <div>
+      <NavBar />
       <div className="row align-items-center profile-header">
         <div className="col-md-2 mb-3">
           <img
