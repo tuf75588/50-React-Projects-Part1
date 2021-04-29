@@ -1,19 +1,12 @@
 import React from 'react';
 import Login from './login-button';
+import AuthenticationButton from './authentication-button';
 import Signup from './sign-up';
-const Hero = () => (
-  <div className="flex-container">
-    <div className="container">
-      <div className="row">
-        <Login />
-        <div className="sign-up">
-          <span>
-            Don't have an account yet? <Signup /> now!
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+import { useAuth0 } from '@auth0/auth0-react';
+import AuthedHome from './AuthedHome';
+const Hero = () => {
+  const { isAuthenticated } = useAuth0();
+  return !isAuthenticated ? <div>Please Login</div> : <AuthedHome />;
+};
 
 export default Hero;

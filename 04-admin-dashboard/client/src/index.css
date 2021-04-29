@@ -60,7 +60,6 @@ button {
 .container {
   display: flex;
   margin: auto;
-  flex-direction: column;
   text-align: center;
 }
 .row {
@@ -79,12 +78,7 @@ button {
   margin-bottom: 1rem;
   padding: 0.5em;
 }
-.btn,
-.login {
-  font-size: 1.2rem;
-  width: 100px;
-}
 
-.sign-up span {
-  font-size: 1.2rem;
+.dash-login {
+  text-align: center;
 }
