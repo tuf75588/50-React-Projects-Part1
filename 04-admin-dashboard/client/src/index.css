@@ -79,6 +79,13 @@ button {
   padding: 0.5em;
 }
 
-.dash-login {
+.dash-login h1 {
   text-align: center;
+}
+.drawer {
+  width: 256px;
+  border-right: 1px solid black;
+}
+.nav-column {
+  height: calc(100vh - 56px);
 }

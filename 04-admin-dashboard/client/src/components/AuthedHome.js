@@ -3,7 +3,21 @@ import AuthedNav from './auth-nav';
 function AuthedHome() {
   return (
     <div className="dash-login">
-      <h1>Welcome to your dashboard</h1>
+      <div className="sidebar drawer">
+        <nav className="nav-column">
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+          <a href="blank">1</a>
+        </nav>
+      </div>
     </div>
   );
 }
