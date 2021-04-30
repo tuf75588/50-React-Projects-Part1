@@ -88,24 +88,39 @@ button {
 }
 .nav-column {
   height: calc(100vh - 56px);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8px 8px;
+  flex-direction: column;
 }
-
+.nav-column a {
+  width: 100%;
+  display: flex;
+}
 .admin-nav {
   background-color: #000;
   color: #c9cace;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 56px;
   display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  z-index: 20;
-  box-shadow: none;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .admin_header {
   padding-left: 20px;
   width: 100%;
+  font-size: 1.5rem;
+}
+
+.admin-nav-second-child .discuss .label-button {
+  padding-right: 15px;
+}
+
+.discuss,
+.label-button {
+  margin: 0 15px;
+}
+
+.discuss {
+  padding: 25px;
+  font-size: 1rem;
 }
