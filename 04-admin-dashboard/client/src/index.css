@@ -89,3 +89,23 @@ button {
 .nav-column {
   height: calc(100vh - 56px);
 }
+
+.admin-nav {
+  background-color: #000;
+  color: #c9cace;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  z-index: 20;
+  box-shadow: none;
+}
+
+.admin_header {
+  padding-left: 20px;
+  width: 100%;
+}
