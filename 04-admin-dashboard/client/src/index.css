@@ -84,17 +84,19 @@ button {
 }
 .drawer {
   width: 256px;
-  border-right: 1px solid black;
+  border-right: 1px solid #c9cace;
 }
+
 .nav-column {
-  height: calc(100vh - 56px);
   display: flex;
   justify-content: space-between;
   padding: 20px 8px 8px;
   flex-direction: column;
+  height: calc(100vh - 56px);
 }
 .nav-column a {
   width: 100%;
+
   display: flex;
 }
 .admin-nav {
@@ -102,7 +104,8 @@ button {
   color: #c9cace;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  height: 56px;
+  justify-content: space-around;
 }
 
 .admin_header {
@@ -132,4 +135,15 @@ button {
 
 .jss76 {
   color: #000;
+  height: 36px;
+}
+.jss76 span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.help a {
+  padding: 10px;
+  width: 100%;
 }

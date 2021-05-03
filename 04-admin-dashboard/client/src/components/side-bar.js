@@ -54,7 +54,7 @@ function Sidebar() {
             <AuthPipeline />
             <Monitoring />
           </div>
-          <div role="list">
+          <div className="help" role="list">
             <a href="blank">Get Support</a>
             <a href="blank">Give Feedback</a>
             <a href="blank">Switch Back</a>
