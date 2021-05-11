@@ -1,11 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 
-function StockChart(): JSX.Element {
+type Props = {
+  chosenStock: string;
+};
+
+function StockChart({ chosenStock }: Props): JSX.Element {
   const canvasRef = useRef(null);
-  useEffect(() => {
-    console.log(canvasRef);
-  });
-  return <canvas ref={canvasRef} />;
+  useEffect(() => {});
+  return (
+    <div className="card-container-graph card">
+      <canvas ref={canvasRef} />
+    </div>
+  );
 }
 
 export default StockChart;

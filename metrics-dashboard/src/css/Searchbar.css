@@ -1,5 +1,4 @@
 .search-bar {
-
   padding: 1rem;
 }
 .search-button {
@@ -23,4 +22,9 @@
   padding: 0.5rem;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+.card-container {
+  background: tomato;
+  border-radius: 0.25rem;
 }
