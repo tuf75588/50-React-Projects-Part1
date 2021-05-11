@@ -1,5 +1,9 @@
 .filter-area {
-  background-color: tan;
   padding: 1rem;
   height: calc(57% - 10px);
+}
+
+.filter-card-body .filter-header {
+  font-size: 1rem;
+  font-weight: 500;
 }
