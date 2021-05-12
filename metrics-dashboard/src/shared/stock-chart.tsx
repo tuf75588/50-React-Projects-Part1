@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-type Props = {
-  chosenStock: string;
-};
-
-function StockChart({ chosenStock }: Props): JSX.Element {
+function StockChart(): JSX.Element {
   const canvasRef = useRef(null);
   useEffect(() => {});
   return (

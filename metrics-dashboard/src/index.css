@@ -28,6 +28,8 @@ code {
 }
 .app-container_row {
   height: 60%;
+  border: 1px solid white;
+  max-height: 415px;
 }
 .app-container_left {
   width: calc(30% - 10px);
@@ -35,7 +37,6 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 415px;
 }
 
 .row {
