@@ -14,7 +14,7 @@ function StockSearch({ setActiveStock }: Props) {
   return (
     <div className="search-wrapper">
       <div>
-        <label htmlFor="search">Search by stock Code:</label>
+        <label htmlFor="search">Search by Stock Code:</label>
       </div>
       <input
         type="text"

@@ -41,5 +41,19 @@ body {
 
 .search-button {
   display: block;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 10px auto;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 10%;
+  border: none;
+  padding: 0.5rem;
+}
+
+input[type='text'] {
+  width: 20%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
 }
