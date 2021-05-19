@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import StockSearch from './components/StockSearch';
+import StockTable from './components/StockTable';
 const App = () => {
   const [activeStock, setActiveStock] = useState('');
   return (
     <div className="home-container">
       <StockSearch setActiveStock={setActiveStock} />
-      {activeStock}
+      <StockTable stockSymbol={activeStock} />
     </div>
   );
 };
