@@ -11,7 +11,29 @@ type StockTableProps = {
 };
 
 function StockTable({ stockSymbol }: StockTableProps) {
-  return <div>{stockSymbol} </div>;
+  return (
+    <div>
+      {/* flex container -- COLUMN  */}
+      <div className="stock-table-header-row">
+        <div>
+          <ul className="stock-table-data-info">
+            <li>Opening Price</li>
+            <li>High Price</li>
+            <li>Low Price</li>
+            <li>Current Price</li>
+            <li>Previous Closing Price</li>
+          </ul>
+          <ul className="stock-table-data-info stock-prices">
+            <li className="stock-price-item">123.22</li>
+            <li className="stock-price-item">123.22</li>
+            <li className="stock-price-item">123.22</li>
+            <li className="stock-price-item">123.22</li>
+            <li className="stock-price-item">123.22</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default StockTable;
