@@ -1,5 +1,7 @@
 import React from 'react';
 import { stock } from '../apis/index';
+import Loading from './Loading';
+import StockResults from './StockResults';
 
 // this component will receive a stock code through props, we will run the useEffect callback
 // every time this code changes (when user searches for a new symbol)
@@ -11,9 +13,11 @@ type StockTableProps = {
 };
 
 function StockTable({ stockSymbol }: StockTableProps) {
-  const [tableData, setTableData] = React.useState({ o: '' });
+  const [tableData, setTableData] = React.useState({});
   const [status, setStatus] = React.useState('idle');
   React.useEffect(() => {
+    if (stockSymbol === '') return;
+    setStatus('loading');
     stock
       .get('quote', {
         params: {
@@ -22,18 +26,14 @@ function StockTable({ stockSymbol }: StockTableProps) {
         },
       })
       .then((response) => {
-        setStatus('loading');
         setTableData(response.data);
         setStatus('success');
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        setStatus('idle');
       });
   }, [stockSymbol]);
-  if (status === 'loading') return <h1>loading..</h1>;
+  if (status === 'loading') return <Loading />;
   console.log(tableData);
   return (
     <div>
@@ -47,13 +47,7 @@ function StockTable({ stockSymbol }: StockTableProps) {
             <li>Current Price</li>
             <li>Previous Closing Price</li>
           </ul>
-          <ul className="stock-table-data-info stock-prices">
-            <li className="stock-price-item">${tableData.o}</li>
-            <li className="stock-price-item">123.22</li>
-            <li className="stock-price-item">123.22</li>
-            <li className="stock-price-item">123.22</li>
-            <li className="stock-price-item">123.22</li>
-          </ul>
+          {tableData && <StockResults data={tableData} />}
         </div>
       </div>
     </div>
