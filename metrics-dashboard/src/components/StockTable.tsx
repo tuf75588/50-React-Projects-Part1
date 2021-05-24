@@ -13,7 +13,7 @@ type StockTableProps = {
 };
 
 function StockTable({ stockSymbol }: StockTableProps) {
-  const [tableData, setTableData] = React.useState({});
+  const [tableData, setTableData] = React.useState<null | {}>(null);
   const [status, setStatus] = React.useState('idle');
   React.useEffect(() => {
     if (stockSymbol === '') return;
