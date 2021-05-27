@@ -1,6 +1,7 @@
 import React from 'react';
 import { stock } from '../apis/index';
 import Loading from './Loading';
+import StockGraph from './StockGraph';
 import StockResults from './StockResults';
 
 // this component will receive a stock code through props, we will run the useEffect callback
@@ -12,8 +13,19 @@ type StockTableProps = {
   stockSymbol: string;
 };
 
+type StockProps = {
+  c: number;
+  h: number;
+  l: number;
+  o: number;
+  pc: number;
+  t: number;
+};
+
 function StockTable({ stockSymbol }: StockTableProps) {
-  const [tableData, setTableData] = React.useState<null | {}>(null);
+  const [tableData, setTableData] = React.useState<StockProps>(
+    {} as StockProps
+  );
   const [status, setStatus] = React.useState('idle');
   React.useEffect(() => {
     if (stockSymbol === '') return;

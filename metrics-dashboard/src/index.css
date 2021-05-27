@@ -23,6 +23,7 @@ body {
 }
 ul {
   padding: 0;
+  margin: 0;
 }
 #root {
   height: 100%;
@@ -70,11 +71,17 @@ input[type='text'] {
   justify-content: space-evenly;
 }
 
+.stock-table-data-info:first-child li {
+  border-bottom: 0.5px solid white;
+  margin: 5px;
+  color: tomato;
+}
+
 .stock-table-data-info li {
   list-style-type: none;
   font-size: 1.2rem;
   width: 100%;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .stock-prices .stock-price-item {
