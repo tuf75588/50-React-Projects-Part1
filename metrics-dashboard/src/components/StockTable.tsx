@@ -62,6 +62,7 @@ function StockTable({ stockSymbol }: StockTableProps) {
           {tableData && <StockResults data={tableData} />}
         </div>
       </div>
+      {tableData && <StockGraph values={tableData} />}
     </div>
   );
 }
