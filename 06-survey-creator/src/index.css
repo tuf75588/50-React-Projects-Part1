@@ -29,7 +29,6 @@ code {
 
 .header-thank-you {
   text-align: center;
-  text-decoration: underline;
 }
 
 .question-section {
@@ -41,4 +40,13 @@ code {
   padding: 2rem;
   background: var(--question-background);
   margin: 1.2rem;
+}
+
+.button-grade-num {
+  padding: 0.9rem 2rem;
+  margin: 0 5px;
+}
+
+.customer-grade {
+  margin-top: 1.1rem;
 }

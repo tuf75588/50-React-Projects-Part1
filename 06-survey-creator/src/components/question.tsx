@@ -1,4 +1,5 @@
 import React from 'react';
+import GradingBar from './grading-bar';
 
 type Questions = {
   questions: string;
@@ -6,7 +7,12 @@ type Questions = {
 
 function Question({ questions }: Questions) {
   console.log(questions);
-  return <div className="question-container">{questions}</div>;
+  return (
+    <div className="question-container">
+      {questions}
+      <GradingBar />
+    </div>
+  );
 }
 
 export default Question;
