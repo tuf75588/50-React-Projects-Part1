@@ -6,6 +6,16 @@ function GradingBar() {
       {num}
     </button>
   ));
-  return <div className="customer-grade">{grades}</div>;
+  return (
+    <div className="grade-container">
+      <div>
+        <p className="customer-grade">{grades}</p>
+      </div>
+      <div className="agree-disagree">
+        <p>disagree</p>
+        <p>agree</p>
+      </div>
+    </div>
+  );
 }
 export default GradingBar;
